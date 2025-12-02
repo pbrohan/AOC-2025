@@ -1,12 +1,9 @@
-use std::env;
 use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
 
-fn main() {
-    let args: Vec<String> = env::args().collect();
-    let inputloc = &args[1];
-    let inputs = get_input_arr(inputloc).unwrap();
+pub fn day01(file_loc: &str) {
+    let inputs = get_input_arr(file_loc).unwrap();
     println!("Part 1: {}", inputs.0);
     println!("Part 2: {}", inputs.1);
 }
