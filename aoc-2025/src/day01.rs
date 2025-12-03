@@ -4,6 +4,7 @@ use std::path::Path;
 
 pub fn day01(file_loc: &str) {
     let inputs = get_input_arr(file_loc).unwrap();
+    println!("---Day  1---");
     println!("Part 1: {}", inputs.0);
     println!("Part 2: {}", inputs.1);
 }

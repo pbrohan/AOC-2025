@@ -27,7 +27,7 @@ fn invalid_ids_1(start: i64, end: i64) -> Vec<i64> {
 
 fn get_next_double(x: i64) -> i64 {
     let x_len: u32 = (x as f64).log10().floor() as u32 + 1;
-    let mut attempt = 0;
+    let mut attempt;
     let mut x_start: i64;
     let mut start_len: u32;
     if x_len % 2 == 0 {
@@ -96,6 +96,7 @@ pub fn day02(file_loc: &str) {
         p1_sum += invalid_ids_1(pair.0, pair.1).iter().sum::<i64>();
         p2_sum += p2(pair.0, pair.1).iter().sum::<i64>();
     }
+    println!("---Day  2---");
     println!("Part 1: {}", p1_sum);
     println!("Part 2: {}", p2_sum);
 }
