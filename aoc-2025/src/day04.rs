@@ -48,6 +48,8 @@ fn p2(input: &Vec<Vec<usize>>) -> i32 {
     let mut removed = 0;
     loop {
         let rem_start = removed;
+        // We could update this cleverly every time we remove a roll
+        // but that's basically not worth it
         let adj_map = get_adjacency(&input);
         for y in 0..i_l {
             for x in 0..row_l {
